@@ -27,11 +27,13 @@ def load_adapters(nonebug_init: None):  # noqa: PT004
     pytest.importorskip("nonebot.adapters.discord")
     pytest.importorskip("nonebot.adapters.telegram")
     pytest.importorskip("nonebot.adapters.onebot")
+    pytest.importorskip("nonebot.adapters.matrix")
     from nonebot.adapters.qq import Adapter as QQAdapter
     from nonebot.adapters.red import Adapter as RedAdapter
     from nonebot.adapters.dodo import Adapter as DoDoAdapter
     from nonebot.adapters.feishu import Adapter as FeishuAdapter
     from nonebot.adapters.satori import Adapter as SatoriAdapter
+    from nonebot.adapters.matrix import Adapter as MatrixAdapter
     from nonebot.adapters.discord import Adapter as DiscordAdpter
     from nonebot.adapters.telegram import Adapter as TelegramAdapter
     from nonebot.adapters.onebot.v11 import Adapter as OnebotV11Adapter
@@ -47,3 +49,4 @@ def load_adapters(nonebug_init: None):  # noqa: PT004
     driver.register_adapter(QQAdapter)
     driver.register_adapter(SatoriAdapter)
     driver.register_adapter(DiscordAdpter)
+    driver.register_adapter(MatrixAdapter)

@@ -501,6 +501,22 @@ def mock_red_message_event(group=False):
         )
 
 
+def mock_matrix_message_event():
+    from nonebot.adapters.matrix.event import RoomMessageEvent
+
+    return RoomMessageEvent(
+        type="m.room.message",
+        room_id="!testroom:example.com",
+        sender="@user:example.com",
+        event_id="$testevent123:example.com",
+        content={
+            "msgtype": "m.text",
+            "body": "/test",
+        },
+        to_me=False,
+    )
+
+
 def mock_satori_message_event(public: bool = False):
     from nonebot.compat import type_validate_python
     from nonebot.adapters.satori.event import (

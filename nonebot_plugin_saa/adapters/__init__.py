@@ -15,6 +15,8 @@ with contextlib.suppress(ImportError):
 with contextlib.suppress(ImportError):
     from . import kaiheila as kaiheila
 with contextlib.suppress(ImportError):
+    from . import matrix as matrix
+with contextlib.suppress(ImportError):
     from . import telegram as telegram
 with contextlib.suppress(ImportError):
     from . import onebot_v11 as onebot_v11

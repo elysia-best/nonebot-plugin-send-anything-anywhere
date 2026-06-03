@@ -25,6 +25,7 @@ from .registries import TargetQQGuildDirect as TargetQQGuildDirect
 from .registries import TargetSatoriUnknown as TargetSatoriUnknown
 from .registries import TargetTelegramForum as TargetTelegramForum
 from .registries import TargetDiscordChannel as TargetDiscordChannel
+from .registries import TargetMatrixRoom as TargetMatrixRoom
 from .registries import TargetQQGuildChannel as TargetQQGuildChannel
 from .registries import TargetTelegramCommon as TargetTelegramCommon
 from .registries import TargetKaiheilaChannel as TargetKaiheilaChannel
@@ -48,5 +49,6 @@ __plugin_meta__ = PluginMetadata(
         "~feishu",
         "~red",
         "~qq",
+        "~matrix",
     },
 )

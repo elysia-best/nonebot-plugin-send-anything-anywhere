@@ -297,6 +297,19 @@ class TargetDiscordChannel(PlatformTarget):
     channel_id: int
 
 
+class TargetMatrixRoom(PlatformTarget):
+    """Matrix 房间
+
+    参数
+        room_id: 房间 ID
+    """
+
+    platform_type: Literal[SupportedPlatform.matrix_room] = (
+        SupportedPlatform.matrix_room
+    )
+    room_id: str
+
+
 # this union type is for deserialize pydantic model with nested PlatformTarget
 AllSupportedPlatformTarget = Union[
     TargetQQGroup,
@@ -316,6 +329,7 @@ AllSupportedPlatformTarget = Union[
     TargetDoDoPrivate,
     TargetSatoriUnknown,
     TargetDiscordChannel,
+    TargetMatrixRoom,
 ]
 
 
